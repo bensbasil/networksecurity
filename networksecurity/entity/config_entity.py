@@ -29,7 +29,7 @@ class DataIngestionConfig:
     ):
         self.data_ingestion_dir: str = os.path.join(
             training_pipeline_config.artifact_dir,
-            training_pipeline.data_ingestion_dir_NAME
+            training_pipeline.DATA_INGESTION_DIR_NAME
         )
 
         self.feature_store_file_path: str = os.path.join(
@@ -75,30 +75,49 @@ class DataValidationConfig:
         self.valid_data_dir: str = os.path.join(
             self.data_validation_dir,
             training_pipeline.DATA_VALIDATION_VALID_DIR,
-            training_pipeline.FILE_NAME
+            
         )
 
         self.invalid_data_dir: str = os.path.join(
             self.data_validation_dir,
-            training_pipeline.DATA_VALIDATION_VALID_DIR
-            training_pipeline.TRAIN_FILE_NAME
+            training_pipeline.DATA_VALIDATION_INVALID_DIR,
+            
         )
 
         self.valid_train_file_path: str = os.path.join(
             self.valid_data_dir,
-            training_pipeline.DATA_INGESTION_INGESTION_DIR,
-            training_pipeline.TEST_FILE_NAME
+            
+            training_pipeline.TRAIN_FILE_NAME
         )
 
         self.valid_test_file_path: str = (
             self.valid_data_dir,
-            training_pipeline.DATA_INGESTION_TRAIN_TEST_SPLIT_RATIO
+            training_pipeline.TEST_FILE_NAME
+        )
+        
+        self.invalid_train_file_path: str = os.path.join(
+            self.invalid_data_dir,    
+            training_pipeline.TRAIN_FILE_NAME
         )
 
-        self.drift_report_file_path: str = (
-            training_pipeline.DATA_INGESTION_COLLECTION_NAME
+        self.invalid_test_file_path: str = (
+            self.invalid_data_dir,
+            training_pipeline.TEST_FILE_NAME
         )
 
-        self.database_name: str = (
-            training_pipeline.DATA_INGESTION_DATABASE_NAME
+        self.drift_report_file_path: str = os.path.join(
+            self.data_validation_dir,
+            training_pipeline.DATA_VALIDATION_DRIFT_REPORT_DIR,
+            training_pipeline.DATA_VALIDATION_DRIFT_REPORT_FILE_NAME,
         )
+
+"""
+Data Validation related constant start with DATA_VALIDATION VAR NAME
+"""
+
+DATA_VALIDATION_DIR_NAME: str="data_validation"
+DATA_VALIDATION_VALID_DIR: str="validated"
+DATA_VALIDATION_INVALID_DIR: str="invalid"
+DATA_VALIDATION_DRIFT_REPORT_DIR: str="drift_report"
+DATA_VALIDATION_DRIFT_REPORT_FILE_NAME: str="report.yaml"
+
