@@ -8,6 +8,8 @@ Requires-Dist: pandas
 Requires-Dist: numpy
 Requires-Dist: pymongo
 Requires-Dist: certifi
+Requires-Dist: dill
+Requires-Dist: pyamal
 Requires-Dist: scikit-learn
 Dynamic: author
 Dynamic: author-email
