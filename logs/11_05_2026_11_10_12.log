@@ -1,0 +1,11 @@
+[2026-11-05 11:10:12,111] 22 networksecurity.logging.logger - INFO - Logging system initialized successfully
+[2026-11-05 11:10:12,686] 17 root - INFO - Initiate the data ingestion
+[2026-11-05 11:10:12,686] 107 root - INFO - Data ingestion started
+[2026-11-05 11:10:17,453] 71 root - INFO - Feature store export completed
+[2026-11-05 11:10:17,529] 100 root - INFO - Train and test datasets created successfully
+[2026-11-05 11:10:17,529] 19 root - INFO - Data Initiation Completed
+[2026-11-05 11:10:17,530] 22 root - INFO - Initiate the data Validation
+[2026-11-05 11:10:17,541] 44 root - INFO - Required number of columns: 50
+[2026-11-05 11:10:17,541] 48 root - INFO - Dataframe number of columns: 50
+[2026-11-05 11:10:17,541] 44 root - INFO - Required number of columns: 50
+[2026-11-05 11:10:17,541] 48 root - INFO - Dataframe number of columns: 50

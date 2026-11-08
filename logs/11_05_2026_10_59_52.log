@@ -1,0 +1,7 @@
+[2026-11-05 10:59:52,845] 22 networksecurity.logging.logger - INFO - Logging system initialized successfully
+[2026-11-05 10:59:53,438] 17 root - INFO - Initiate the data ingestion
+[2026-11-05 10:59:53,438] 107 root - INFO - Data ingestion started
+[2026-11-05 10:59:56,101] 71 root - INFO - Feature store export completed
+[2026-11-05 10:59:56,172] 100 root - INFO - Train and test datasets created successfully
+[2026-11-05 10:59:56,173] 19 root - INFO - Data Initiation Completed
+[2026-11-05 10:59:56,173] 22 root - INFO - Initiate the data Validation

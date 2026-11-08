@@ -1,11 +1,23 @@
+import os
+
+from dotenv import load_dotenv
 from pymongo import MongoClient
-uri = "mongodb+srv://bensdbasil:123bens@cluster0.2cbaysm.mongodb.net/"
-client = MongoClient(uri)
+
+load_dotenv()
+
+MONGO_DB_URL = os.getenv("MONGO_DB_URL")
+
+if not MONGO_DB_URL:
+    raise ValueError("MONGO_DB_URL is missing from environment variables")
+
+client = MongoClient(MONGO_DB_URL)
+
 try:
     client.admin.command("ping")
     print("Connected successfully")
-    client.close()
 
 except Exception as e:
-    raise Exception(
-        "The following error occurred: ", e)
+    raise Exception(f"The following error occurred: {e}") from e
+
+finally:
+    client.close()

@@ -8,4 +8,5 @@ pyamal
 scikit-learn
 
 
--e .
+
+##-e .
