@@ -27,6 +27,40 @@ class DataTransformation:
             self.data_transformation_config:DataTransformationConfig=data_transformation_config
         except Exception as e:
             raise NetworkSecurityException(e,sys)
+
+    @staticmethod
+    def read_data(file_path)->pd.DataFrame:
+        try:
+            return pd.read_csv(file_path)
+        except Exception as e:
+            raise NetworkSecurityException(e,sys)
+
+        
+    def get_data_transformer_object(cls)->Pipeline:
+        """ 
+        It initalises a KNNImputer object with the paramters specified in the training_pipeline.py file
+        and return a Pipeline object with the KNNImputer object as the first step.
+        
+        Args:
+            cls: DataTransformation
+            
+        Returns:
+            A Pipeline object
+        """
+        logging.info(
+            """Entered get_data_transformer_object method of TRansformation class
+            """
+        )
+        try:
+            imputer:KNNImputer=KNNImputer(**DATA_TRANSFORMATION_IMPUTER_PARAMS)
+            logging.info(
+                f"Initialiase KNNImputer with {DATA_TRANSFORMATION_IMPUTER_PARAMS}"
+            )
+            processor:Pipeline=Pipeline([("imputer",imputer)])
+            return processor
+        except Exception as e:
+            raise NetworkSecurityException(e,sys)
+    
         
     def initiate_data_transformation(self)->DataTransformationArtifact:
         logging.info("Entered initiate_data_transformation method of DataTransformation class")
@@ -41,10 +75,11 @@ class DataTransformation:
             target_feature_train_df=target_feature_train_df.replace(-1,0)
         
         ##testing dataframe
-        
-            input_feature_test_df=test.df.drop(columns=[TARGET_COLUMN],axis=1)
+            input_feature_test_df=test_df.drop(columns=[TARGET_COLUMN],axis=1)
             target_feature_test_df=test_df[TARGET_COLUMN]
             target_feature_test_df=target_feature_test_df.replace(-1,0)
+            
+            
             
             
         
