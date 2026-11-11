@@ -80,11 +80,7 @@ class DataTransformation:
             target_feature_test_df=target_feature_test_df.replace(-1,0)
             
         
-            preprocessor            
-            
-            
-        
-            
+            preprocessor       
             
             
             
