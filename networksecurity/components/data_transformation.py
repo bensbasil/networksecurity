@@ -79,11 +79,11 @@ class DataTransformation:
             target_feature_test_df=test_df[TARGET_COLUMN]
             target_feature_test_df=target_feature_test_df.replace(-1,0)
             
-            
+        
+            preprocessor            
             
             
         
-            input_feature_test_df=tes
             
             
             
