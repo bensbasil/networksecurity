@@ -1,0 +1,16 @@
+[2026-11-12 10:53:55,548] 22 networksecurity.logging.logger - INFO - Logging system initialized successfully
+[2026-11-12 10:53:56,423] 22 root - INFO - Initiate the data ingestion
+[2026-11-12 10:53:56,423] 107 root - INFO - Data ingestion started
+[2026-11-12 10:53:59,273] 71 root - INFO - Feature store export completed
+[2026-11-12 10:53:59,349] 100 root - INFO - Train and test datasets created successfully
+[2026-11-12 10:53:59,350] 24 root - INFO - Data Initiation Completed
+[2026-11-12 10:53:59,351] 27 root - INFO - Initiate the data Validation
+[2026-11-12 10:53:59,362] 44 root - INFO - Required number of columns: 50
+[2026-11-12 10:53:59,362] 48 root - INFO - Dataframe number of columns: 50
+[2026-11-12 10:53:59,362] 44 root - INFO - Required number of columns: 50
+[2026-11-12 10:53:59,362] 48 root - INFO - Dataframe number of columns: 50
+[2026-11-12 10:53:59,477] 178 root - INFO - Data validation artifact: DataValidationArtifact(validation_status=True, valid_train_file_path='Artifacts/11_12_2026_10_53_56/data_validation/validated/train.csv', valid_test_file_path='Artifacts/11_12_2026_10_53_56/data_validation/validated/test.csv', invalid_train_file_path='Artifacts/11_12_2026_10_53_56/data_validation/invalid/train.csv', invalid_test_file_path='Artifacts/11_12_2026_10_53_56/data_validation/invalid/test.csv', drift_report_file_path='Artifacts/11_12_2026_10_53_56/data_validation/drift_report/report.yaml')
+[2026-11-12 10:53:59,477] 29 root - INFO - Data Validation Completed
+[2026-11-12 10:53:59,477] 33 root - INFO - data Validation Completed
+[2026-11-12 10:53:59,477] 83 root - INFO - Entered initiate_data_transformation method of DataTransformation class
+[2026-11-12 10:53:59,477] 89 root - INFO - Starting data transformation
